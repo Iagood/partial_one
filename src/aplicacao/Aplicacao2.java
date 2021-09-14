@@ -42,6 +42,8 @@ public class Aplicacao2 {
 					
 				case 2:
 					System.out.println("Favor,informe a posição participante que quer remover!");
+					listaParticipantes.remove(sc.nextInt());
+					break;
 					
 				case 3:
 					System.out.println("Favor,informe o nome do participante que quer remover!");
@@ -51,7 +53,21 @@ public class Aplicacao2 {
 					
 				case 4:
 					System.out.println("Essa é a lista de participantes:");
-					System.out.println(listaParticipantes.toString());
+					int valor = 0;
+					for (String teste:listaParticipantes) {
+						System.out.println("Posição: "+ valor +  " Nome: " + teste);
+						valor ++;
+					}
+					break;
+					
+				case 5:
+					System.out.println("Informe o nome do participante que deseja perquisar:");
+					nome = sc.next()+"\r\n";
+					if (listaParticipantes.contains(nome)) {
+						System.out.println(nome +" está na lista!");
+					} else {
+						System.out.println(nome +" não está na lista!");
+					}
 					break;
 				
 				case 6:
